@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class EntryController {
 	@RequestMapping("/entries")
 	public String entries() {
+		//this by default always returns a json file to the browser
 		return "list of entries";
 	}
 }
