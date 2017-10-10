@@ -1,4 +1,4 @@
-package mucScheduler.service;
+package mumScheduler.service;
 
 import java.time.LocalDate;
 import java.util.Arrays;
