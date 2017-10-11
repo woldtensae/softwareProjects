@@ -1,30 +1,32 @@
 package mumSchedule.domain;
 
-import java.time.LocalDate;
+//import java.time.LocalDate;
 
 public class Block {
 	private String blockName;
-	private LocalDate beginDate;
-	private LocalDate endDate;
+	private String beginDate;
+	private String endDate;
 	
+	public Block() {
+		
+	}
 	
-	
-	public Block(String blockName, LocalDate beginDate, LocalDate endDate) {
+	public Block(String blockName, String beginDate, String endDate) {
 		super();
 		this.blockName = blockName;
 		this.beginDate = beginDate;
 		this.endDate = endDate;
 	}
-	public LocalDate getBeginDate() {
+	public String getBeginDate() {
 		return beginDate;
 	}
-	public void setBeginDate(LocalDate beginDate) {
+	public void setBeginDate(String beginDate) {
 		this.beginDate = beginDate;
 	}
-	public LocalDate getEndDate() {
+	public String getEndDate() {
 		return endDate;
 	}
-	public void setEndDate(LocalDate endDate) {
+	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
 	public void setBlockName(String blockName) {
@@ -33,5 +35,4 @@ public class Block {
 	public String getBlockName() {
 		return this.blockName;
 	}
-
 }

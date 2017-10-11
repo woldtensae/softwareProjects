@@ -12,9 +12,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class BlockService {
 	List<Block> blockList = new ArrayList<>(Arrays.asList(
-			new Block("Feb", LocalDate.of(2017, 12, 12), LocalDate.of(2017, 12, 12)),
-			new Block("June", LocalDate.of(2017, 11, 12), LocalDate.of(2017, 11, 12)),
-			new Block("September", LocalDate.of(2017, 10, 12), LocalDate.of(2017, 10, 12))
+			new Block("Feb","06/07/2017", "08/08/2017"),
+			new Block("June","06/07/2017", "08/08/2017"),
+			new Block("September","06/07/2017", "08/08/2017")
 	));
 	public List<Block> getAllBlocks(){
 		return blockList;
@@ -32,5 +32,14 @@ public class BlockService {
 			}
 		}
 	}
-	
+	public void addBlock(Block block) {
+		blockList.add(block);
+	}
+	public void updateBlockName(Block block, String blockName) {
+		for(int i=0; i<blockList.size();i++) {
+			if(blockList.get(i).getBlockName().equals(blockName)) {
+				blockList.set(i, block);
+			}
+		}
+	}
 }
