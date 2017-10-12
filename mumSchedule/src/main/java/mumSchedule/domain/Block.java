@@ -1,8 +1,11 @@
 package mumSchedule.domain;
 
-//import java.time.LocalDate;
+import javax.persistence.Entity;
 
+//import java.time.LocalDate;
+@Entity
 public class Block {
+	
 	private String blockName;
 	private String beginDate;
 	private String endDate;
